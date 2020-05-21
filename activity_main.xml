@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_bg"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/toolbar">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:layout_below="@+id/toolbar">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="20dp">
+
+               <TextView
+                   android:id="@+id/main_greeting"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Greeting"
+                   android:textColor="#FFFFFF"
+                   android:textSize="30dp" />
+
+               <TextView
+                   android:id="@+id/main_username"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/main_greeting"
+                   android:layout_marginTop="10dp"
+                   android:text="My Name"
+                   android:textColor="#FFFFFF"
+                   android:textSize="30dp" />
+
+               <TextView
+                   android:id="@+id/main_support"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/main_username"
+                   android:layout_marginTop="15dp"
+                   android:text="Support"
+                   android:textColor="#FFFFFF"
+                   android:textSize="23dp" />
+
+
+               <ImageView
+                   android:id="@+id/main_usericon"
+                   android:layout_width="80dp"
+                   android:layout_height="80dp"
+                   android:layout_alignParentRight="true"
+                   android:src="@drawable/usericon"
+                   android:layout_centerVertical="true"/>
+           </RelativeLayout>
+
+           <!-- Cards -->
+           <GridLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:columnCount="2"
+               android:columnOrderPreserved="false"
+               android:rowCount="2"
+               android:paddingBottom="20dp">
+
+               <androidx.cardview.widget.CardView
+                   android:id="@+id/main_vocabularies"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_columnWeight="1"
+                   android:layout_margin="12dp"
+                   app:cardCornerRadius="12dp"
+                   app:cardElevation="6dp" >
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:gravity="center"
+                       android:orientation="vertical"
+                       android:padding="16dp">
+
+                       <ImageView
+                           android:layout_width="110dp"
+                           android:layout_height="110dp"
+                           android:src="@drawable/vocab" />
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="12dp"
+                           android:text="Vocabularies"
+                           android:textColor="#6f6f6f"
+                           android:textSize="20dp" />
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+
+               <androidx.cardview.widget.CardView
+                   android:id="@+id/main_exercises"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_columnWeight="1"
+                   android:layout_margin="12dp"
+                   app:cardCornerRadius="12dp"
+                   app:cardElevation="6dp" >
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:gravity="center"
+                       android:orientation="vertical"
+                       android:padding="16dp">
+
+                       <ImageView
+                           android:layout_width="110dp"
+                           android:layout_height="110dp"
+                           android:src="@drawable/brain" />
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="12dp"
+                           android:text="Exercises"
+                           android:textColor="#6f6f6f"
+                           android:textSize="20dp" />
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+
+               <!-- Second Row -->
+               <androidx.cardview.widget.CardView
+                   android:id="@+id/main_dictation"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_columnWeight="1"
+                   android:layout_margin="12dp"
+                   app:cardCornerRadius="12dp"
+                   app:cardElevation="6dp" >
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:gravity="center"
+                       android:orientation="vertical"
+                       android:padding="16dp">
+
+                       <ImageView
+                           android:layout_width="110dp"
+                           android:layout_height="110dp"
+                           android:src="@drawable/dictation" />
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="12dp"
+                           android:text="Audio Dictation"
+                           android:textColor="#6f6f6f"
+                           android:textSize="20dp" />
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+
+               <androidx.cardview.widget.CardView
+                   android:id="@+id/main_ranking"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_columnWeight="1"
+                   android:layout_margin="12dp"
+                   app:cardCornerRadius="12dp"
+                   app:cardElevation="6dp" >
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:gravity="center"
+                       android:orientation="vertical"
+                       android:padding="16dp">
+
+                       <ImageView
+                           android:layout_width="110dp"
+                           android:layout_height="110dp"
+                           android:layout_row="0"
+                           android:layout_column="5"
+                           android:src="@drawable/ranking" />
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="12dp"
+                           android:text="Ranking"
+                           android:textColor="#6f6f6f"
+                           android:textSize="20dp" />
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+
+               <!-- Third Row -->
+               <androidx.cardview.widget.CardView
+                   android:id="@+id/main_survey"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_columnWeight="1"
+                   android:layout_margin="12dp"
+                   app:cardCornerRadius="12dp"
+                   app:cardElevation="6dp" >
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:gravity="center"
+                       android:orientation="vertical"
+                       android:padding="16dp">
+
+                       <ImageView
+                           android:layout_width="110dp"
+                           android:layout_height="110dp"
+                           android:src="@drawable/survey" />
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="12dp"
+                           android:text="Survey"
+                           android:textColor="#6f6f6f"
+                           android:textSize="20dp" />
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+
+               <androidx.cardview.widget.CardView
+                   android:id="@+id/main_me"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_columnWeight="1"
+                   android:layout_margin="12dp"
+                   app:cardCornerRadius="12dp"
+                   app:cardElevation="6dp" >
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:gravity="center"
+                       android:orientation="vertical"
+                       android:padding="16dp">
+
+                       <ImageView
+                           android:layout_width="110dp"
+                           android:layout_height="110dp"
+                           android:src="@drawable/smile" />
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="12dp"
+                           android:text="Profile"
+                           android:textColor="#6f6f6f"
+                           android:textSize="20dp" />
+                   </LinearLayout>
+               </androidx.cardview.widget.CardView>
+
+
+
+           </GridLayout>
+
+       </LinearLayout>
+
+   </ScrollView>
+
+</RelativeLayout>
